@@ -1,0 +1,163 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sample Calendar//Sample iCal 1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Sample Events Calendar
+X-WR-TIMEZONE:Europe/Amsterdam
+
+BEGIN:VTIMEZONE
+TZID:Europe/Amsterdam
+BEGIN:STANDARD
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+TZNAME:CET
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+TZNAME:CEST
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+END:DAYLIGHT
+END:VTIMEZONE
+
+BEGIN:VEVENT
+UID:a1b2c3d4-0001-4e5f-8a9b-c0d1e2f30001@samplecal
+DTSTAMP:20260602T120000Z
+DTSTART;TZID=Europe/Amsterdam:20260510T090000
+DTEND;TZID=Europe/Amsterdam:20260510T170000
+SUMMARY:React & TypeScript Workshop
+DESCRIPTION:A full-day hands-on workshop covering React 19 features\,
+  TypeScript 5.x improvements\, and modern frontend tooling. Includes
+  lunch and networking session.
+LOCATION:Pakhuis de Zwijger\, Piet Heinkade 179\, Amsterdam
+CATEGORIES:Technology,Workshop
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+ORGANIZER;CN=Tech Events NL:mailto:events@techevents.nl
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Jane Doe:mailto:jane@example.com
+URL:https://example.com/events/react-ts-workshop-2026
+END:VEVENT
+
+BEGIN:VEVENT
+UID:a1b2c3d4-0002-4e5f-8a9b-c0d1e2f30002@samplecal
+DTSTAMP:20260602T120000Z
+DTSTART;TZID=Europe/Amsterdam:20260519T183000
+DTEND;TZID=Europe/Amsterdam:20260519T203000
+SUMMARY:Amsterdam Tech Meetup — AI & LLMs
+DESCRIPTION:Monthly meetup for developers. This edition focuses on
+  large language models in production: lessons learned\, cost
+  optimisation\, and the latest open-source tooling.
+LOCATION:Booking.com HQ\, Herengracht 597\, Amsterdam
+CATEGORIES:Technology,Meetup
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://example.com/events/ams-tech-meetup-may-2026
+END:VEVENT
+
+BEGIN:VEVENT
+UID:a1b2c3d4-0003-4e5f-8a9b-c0d1e2f30003@samplecal
+DTSTAMP:20260602T120000Z
+DTSTART;TZID=Europe/Amsterdam:20260528T200000
+DTEND;TZID=Europe/Amsterdam:20260528T220000
+SUMMARY:Concertgebouw — Beethoven Symphony No. 9
+DESCRIPTION:The Royal Concertgebouw Orchestra performs Beethoven's
+  Ninth Symphony\, conducted by Klaus Mäkelä. Featuring the
+  Nederlands Philharmonisch Koor.
+LOCATION:Concertgebouw\, Concertgebouwplein 10\, Amsterdam
+CATEGORIES:Music,Arts
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://www.concertgebouw.nl
+END:VEVENT
+
+BEGIN:VEVENT
+UID:a1b2c3d4-0004-4e5f-8a9b-c0d1e2f30004@samplecal
+DTSTAMP:20260602T120000Z
+DTSTART;TZID=Europe/Amsterdam:20260610T100000
+DTEND;TZID=Europe/Amsterdam:20260612T180000
+SUMMARY:Dutch Design Week Preview — Eindhoven
+DESCRIPTION:Three-day preview event showcasing Dutch industrial and
+  product designers ahead of the main October festival. Includes
+  guided tours\, talks\, and a makers market.
+LOCATION:Klokgebouw\, Klokgebouw 50\, Eindhoven
+CATEGORIES:Design,Arts,Conference
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://example.com/events/ddw-preview-2026
+END:VEVENT
+
+BEGIN:VEVENT
+UID:a1b2c3d4-0005-4e5f-8a9b-c0d1e2f30005@samplecal
+DTSTAMP:20260602T120000Z
+DTSTART;TZID=Europe/Amsterdam:20260620T090000
+DTEND;TZID=Europe/Amsterdam:20260620T100000
+SUMMARY:Team Standup — Q2 Retrospective
+DESCRIPTION:Quarterly retrospective and planning session. Please
+  prepare a brief summary of your Q2 accomplishments and blockers\,
+  and three goals for Q3.
+LOCATION:Meeting Room B\, Floor 3
+CATEGORIES:Work,Meeting
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+RRULE:FREQ=YEARLY;COUNT=1
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Q2 Retro in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:a1b2c3d4-0006-4e5f-8a9b-c0d1e2f30006@samplecal
+DTSTAMP:20260602T120000Z
+DTSTART;TZID=Europe/Amsterdam:20260704T120000
+DTEND;TZID=Europe/Amsterdam:20260704T130000
+SUMMARY:Lunch with Sarah re: Partnership Proposal
+DESCRIPTION:Discuss potential collaboration on the Haarlem sustainable
+  mobility project. Sarah will bring draft MOU.
+LOCATION:Jopenkerk\, Gedempte Voldersgracht 2\, Haarlem
+CATEGORIES:Work,Networking
+STATUS:TENTATIVE
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:EMAIL
+DESCRIPTION:Reminder: Lunch meeting tomorrow
+TRIGGER:-P1D
+ATTENDEE:mailto:me@example.com
+SUMMARY:Reminder: Lunch with Sarah tomorrow
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:a1b2c3d4-0007-4e5f-8a9b-c0d1e2f30007@samplecal
+DTSTAMP:20260602T120000Z
+DTSTART;VALUE=DATE:20260714
+DTEND;VALUE=DATE:20260715
+SUMMARY:Bastille Day 🇫🇷
+DESCRIPTION:National holiday of France. Banks and public services closed.
+CATEGORIES:Holiday
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+RRULE:FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=14
+END:VEVENT
+
+BEGIN:VTODO
+UID:a1b2c3d4-0008-4e5f-8a9b-c0d1e2f30008@samplecal
+DTSTAMP:20260602T120000Z
+DTSTART;TZID=Europe/Amsterdam:20260602T080000
+DUE;TZID=Europe/Amsterdam:20260615T170000
+SUMMARY:Submit GDPR compliance audit report
+DESCRIPTION:Finalise the annual data-protection audit and submit to
+  the DPA portal. Include processing register\, DPIA updates\, and
+  incident log.
+PRIORITY:1
+STATUS:IN-PROCESS
+CATEGORIES:Work,Compliance
+PERCENT-COMPLETE:40
+END:VTODO
+
+END:VCALENDAR
